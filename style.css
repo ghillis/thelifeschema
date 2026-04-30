@@ -26,9 +26,18 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
 .nav-links a { text-decoration: none; color: var(--text); margin-left: 20px; font-weight: 500; }
 
 /* Hero */
-.hero { padding: 100px 0; text-align: center; background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%); }
+.hero { padding: 80px 0; background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%); }
+.hero-inner { display: flex; align-items: center; gap: 60px; justify-content: center; }
+.book-cover { width: 220px; flex-shrink: 0; border-radius: 6px; box-shadow: 0 20px 40px -8px rgb(0 0 0 / 0.3); }
+.hero-text { text-align: left; }
 h1 { font-size: 3rem; margin-bottom: 20px; }
-.subtitle { font-size: 1.25rem; margin-bottom: 40px; color: var(--text); max-width: 600px; margin-inline: auto; }
+.subtitle { font-size: 1.25rem; margin-bottom: 40px; color: var(--text); max-width: 500px; }
+
+@media (max-width: 700px) {
+    .hero-inner { flex-direction: column; text-align: center; }
+    .hero-text { text-align: center; }
+    .book-cover { width: 160px; }
+}
 
 /* Buttons */
 .btn { padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-block; }
@@ -38,8 +47,15 @@ h1 { font-size: 3rem; margin-bottom: 20px; }
 .secondary:hover { background: #eef2ff; }
 
 /* Content Section */
-.content { padding: 80px 0; background: white; text-align: center; }
-.content p { max-width: 800px; margin: 20px auto; font-size: 1.1rem; }
+.content { padding: 80px 0; background: white; }
+.content h2 { text-align: center; margin-bottom: 40px; }
+.about-inner { display: flex; align-items: center; gap: 50px; max-width: 800px; margin: 0 auto; }
+.author-photo { width: 180px; height: 180px; object-fit: cover; border-radius: 50%; flex-shrink: 0; box-shadow: 0 8px 20px -4px rgb(0 0 0 / 0.2); }
+.about-inner p { font-size: 1.1rem; }
+
+@media (max-width: 600px) {
+    .about-inner { flex-direction: column; text-align: center; }
+}
 
 /* Resources Grid */
 .resources { padding: 80px 0; background: #f1f5f9; }
