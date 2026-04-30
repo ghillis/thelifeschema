@@ -1,0 +1,6 @@
+/* 1. Basic Reset */
+*, *::before, *::after {
+  box-sizing: border-box; /* Includes padding/border in element's size */
+  margin: 0;
+  padding: 0;
+}
