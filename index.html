@@ -22,12 +22,13 @@
                 <a href="#about">About</a>
                 <a href="#resources">Resources</a>
                 <a href="#readiness-checklist">Readiness Checklist</a>
+                <a href="#assessment">Assessment</a>
                 <a href="#waitlist">Waitlist</a>
             </div>
         </nav>
     </header>
 
-    <section class="hero">
+    <!--<section class="hero">
         <div class="container">
             <div class="hero-inner">
                 <div class="hero-text">
@@ -40,13 +41,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <section id="nodes" class="nodes-section">
         <div class="container">
-            <h2>The 10 Life Nodes</h2>
-            <p class="section-intro">Hover over any node to explore its purpose and importance</p>
-
+            <!--<h2>The 10 Life Nodes</h2>-->
+            <!--<p class="section-intro">A 10-Node approach to refactoring your life, management, and productivity</p>-->
             <div class="nodes-container">
                 <img src="images/10node.png" alt="The Life Schema 10-node diagram" class="nodes-diagram" usemap="#nodes-map">
                 <map name="nodes-map">
@@ -67,6 +67,290 @@
                     <h3 id="node-title">Hover over a node</h3>
                     <p id="node-text">Select any node in the diagram above to learn more about its role in your personal operating system.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="waitlist" class="waitlist">
+        <div class="container">
+            <div class="waitlist-content">
+                <h2>Join the Waitlist</h2>
+                <p>Be the first to know when The Life Schema launches. Get exclusive updates and special early-bird offers.</p>
+                <form id="waitlist-form" class="waitlist-form">
+                    <div class="form-group">
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               placeholder="Enter your email address"
+                               required
+                               aria-label="Email address">
+                        <button type="submit" class="btn primary">Join Waitlist</button>
+                    </div>
+                    <div id="form-message" class="form-message"></div>
+                </form>
+                <img src="images/903%20Front%20Cover.png" alt="The Life Schema book cover" class="book-cover-featured">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="content">
+        <div class="container">
+            <h2>About the Book</h2>
+            <div class="about-inner">
+                <img src="images/Author_Greg.png" alt="Author Gregory Hillis" class="author-photo">
+                <div class="about-text">
+                    <p>As an IT professional, you know how to manage complex systems, maintain high-availability enviornments, and document every line of code.  But when it comes to your own life--your health, your finances, your relationships, and your peace of mind--are you running on a legacy codebase full of bugs and "spaghetti logic?</p>
+                    <p>Most productivity systems are "Soft." They focus on feelings and "hustle." The Life Schema is different.  It is a hard-coded Information Archetecture for the analytical mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="resources">
+        <div class="container">
+            <h2>Downloadable Resources</h2>
+            <div class="resource-grid">
+                <div class="card">
+                    <h3>OS Root</h3>
+                    <p>The complete Life Schema operating system starter files.</p>
+                    <a href="downloads/life.os.zip" class="download-link" download>Download ZIP</a>
+                </div>
+                <div class="card">
+                    <h3>Audio Introduction</h3>
+                    <p>Listen to the introduction to The Life Schema.</p>
+                    <a href="downloads/002_The_Life_Schema_Introduction.mp3" class="download-link" download>Download MP3</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="assessment" class="assessment">
+        <div class="container">
+            <h2>Self-Assessment: Rate Your 10 Nodes</h2>
+            <p class="section-intro">Evaluate where you stand with each node of your personal OS. Be honest—this assessment is for you.</p>
+
+            <form id="assessment-form" class="assessment-form">
+                <div class="assessment-grid">
+                    <div class="node-assessment">
+                        <h3>Spiritual</h3>
+                        <div class="form-group">
+                            <label>How do you feel you are doing with this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="spiritual-feeling" value="1"> Very Poor</label>
+                                <label class="radio-label"><input type="radio" name="spiritual-feeling" value="2"> Bad</label>
+                                <label class="radio-label"><input type="radio" name="spiritual-feeling" value="3"> Neutral</label>
+                                <label class="radio-label"><input type="radio" name="spiritual-feeling" value="4"> Good</label>
+                                <label class="radio-label"><input type="radio" name="spiritual-feeling" value="5"> Excellent</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Do you have a plan for this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="spiritual-plan" value="yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="spiritual-plan" value="no"> No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="node-assessment">
+                        <h3>Marriage</h3>
+                        <div class="form-group">
+                            <label>How do you feel you are doing with this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="marriage-feeling" value="1"> Very Poor</label>
+                                <label class="radio-label"><input type="radio" name="marriage-feeling" value="2"> Bad</label>
+                                <label class="radio-label"><input type="radio" name="marriage-feeling" value="3"> Neutral</label>
+                                <label class="radio-label"><input type="radio" name="marriage-feeling" value="4"> Good</label>
+                                <label class="radio-label"><input type="radio" name="marriage-feeling" value="5"> Excellent</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Do you have a plan for this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="marriage-plan" value="yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="marriage-plan" value="no"> No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="node-assessment">
+                        <h3>Family</h3>
+                        <div class="form-group">
+                            <label>How do you feel you are doing with this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="family-feeling" value="1"> Very Poor</label>
+                                <label class="radio-label"><input type="radio" name="family-feeling" value="2"> Bad</label>
+                                <label class="radio-label"><input type="radio" name="family-feeling" value="3"> Neutral</label>
+                                <label class="radio-label"><input type="radio" name="family-feeling" value="4"> Good</label>
+                                <label class="radio-label"><input type="radio" name="family-feeling" value="5"> Excellent</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Do you have a plan for this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="family-plan" value="yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="family-plan" value="no"> No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="node-assessment">
+                        <h3>Mental</h3>
+                        <div class="form-group">
+                            <label>How do you feel you are doing with this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="mental-feeling" value="1"> Very Poor</label>
+                                <label class="radio-label"><input type="radio" name="mental-feeling" value="2"> Bad</label>
+                                <label class="radio-label"><input type="radio" name="mental-feeling" value="3"> Neutral</label>
+                                <label class="radio-label"><input type="radio" name="mental-feeling" value="4"> Good</label>
+                                <label class="radio-label"><input type="radio" name="mental-feeling" value="5"> Excellent</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Do you have a plan for this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="mental-plan" value="yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="mental-plan" value="no"> No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="node-assessment">
+                        <h3>Physical</h3>
+                        <div class="form-group">
+                            <label>How do you feel you are doing with this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="physical-feeling" value="1"> Very Poor</label>
+                                <label class="radio-label"><input type="radio" name="physical-feeling" value="2"> Bad</label>
+                                <label class="radio-label"><input type="radio" name="physical-feeling" value="3"> Neutral</label>
+                                <label class="radio-label"><input type="radio" name="physical-feeling" value="4"> Good</label>
+                                <label class="radio-label"><input type="radio" name="physical-feeling" value="5"> Excellent</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Do you have a plan for this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="physical-plan" value="yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="physical-plan" value="no"> No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="node-assessment">
+                        <h3>Finance</h3>
+                        <div class="form-group">
+                            <label>How do you feel you are doing with this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="finance-feeling" value="1"> Very Poor</label>
+                                <label class="radio-label"><input type="radio" name="finance-feeling" value="2"> Bad</label>
+                                <label class="radio-label"><input type="radio" name="finance-feeling" value="3"> Neutral</label>
+                                <label class="radio-label"><input type="radio" name="finance-feeling" value="4"> Good</label>
+                                <label class="radio-label"><input type="radio" name="finance-feeling" value="5"> Excellent</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Do you have a plan for this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="finance-plan" value="yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="finance-plan" value="no"> No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="node-assessment">
+                        <h3>Career</h3>
+                        <div class="form-group">
+                            <label>How do you feel you are doing with this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="career-feeling" value="1"> Very Poor</label>
+                                <label class="radio-label"><input type="radio" name="career-feeling" value="2"> Bad</label>
+                                <label class="radio-label"><input type="radio" name="career-feeling" value="3"> Neutral</label>
+                                <label class="radio-label"><input type="radio" name="career-feeling" value="4"> Good</label>
+                                <label class="radio-label"><input type="radio" name="career-feeling" value="5"> Excellent</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Do you have a plan for this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="career-plan" value="yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="career-plan" value="no"> No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="node-assessment">
+                        <h3>Friendship</h3>
+                        <div class="form-group">
+                            <label>How do you feel you are doing with this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="friendship-feeling" value="1"> Very Poor</label>
+                                <label class="radio-label"><input type="radio" name="friendship-feeling" value="2"> Bad</label>
+                                <label class="radio-label"><input type="radio" name="friendship-feeling" value="3"> Neutral</label>
+                                <label class="radio-label"><input type="radio" name="friendship-feeling" value="4"> Good</label>
+                                <label class="radio-label"><input type="radio" name="friendship-feeling" value="5"> Excellent</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Do you have a plan for this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="friendship-plan" value="yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="friendship-plan" value="no"> No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="node-assessment">
+                        <h3>Learning</h3>
+                        <div class="form-group">
+                            <label>How do you feel you are doing with this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="learning-feeling" value="1"> Very Poor</label>
+                                <label class="radio-label"><input type="radio" name="learning-feeling" value="2"> Bad</label>
+                                <label class="radio-label"><input type="radio" name="learning-feeling" value="3"> Neutral</label>
+                                <label class="radio-label"><input type="radio" name="learning-feeling" value="4"> Good</label>
+                                <label class="radio-label"><input type="radio" name="learning-feeling" value="5"> Excellent</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Do you have a plan for this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="learning-plan" value="yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="learning-plan" value="no"> No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="node-assessment">
+                        <h3>Experience</h3>
+                        <div class="form-group">
+                            <label>How do you feel you are doing with this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="experience-feeling" value="1"> Very Poor</label>
+                                <label class="radio-label"><input type="radio" name="experience-feeling" value="2"> Bad</label>
+                                <label class="radio-label"><input type="radio" name="experience-feeling" value="3"> Neutral</label>
+                                <label class="radio-label"><input type="radio" name="experience-feeling" value="4"> Good</label>
+                                <label class="radio-label"><input type="radio" name="experience-feeling" value="5"> Excellent</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Do you have a plan for this node?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="experience-plan" value="yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="experience-plan" value="no"> No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="assessment-footer">
+                    <button type="submit" class="btn primary btn-large">Score My Results</button>
+                </div>
+            </form>
+
+            <div id="assessment-results" class="assessment-results" style="display: none;">
+                <h3>Your Assessment Results</h3>
+                <div id="results-content"></div>
+                <button type="button" class="btn secondary" onclick="document.getElementById('assessment-results').style.display='none';">Close Results</button>
             </div>
         </div>
     </section>
@@ -157,10 +441,68 @@
                 "Status": "Active",
                 "Dependencies": ["Mental", "Finance"],
                 "LastRefactor": "2026-04-15"
+            },
+            {
+                "ID": "Node_03_Family",
+                "Priority": "Critical",
+                "Status": "Active",
+                "Dependencies": ["Marriage", "Emotional"],
+                "LastRefactor": "2026-03-20"
+            },
+            {
+                "ID": "Node_04_Mental",
+                "Priority": "Critical",
+                "Status": "Active",
+                "Volatility": "Medium",
+                "MaintenanceInterval": "Weekly"
+            },
+            {
+                "ID": "Node_05_Physical",
+                "Priority": "Critical",
+                "Status": "Active",
+                "Volatility": "Medium",
+                "MaintenanceInterval": "Daily"
+            },
+            {
+                "ID": "Node_06_Finance",
+                "Priority": "High",
+                "Status": "Active",
+                "Volatility": "Medium",
+                "MaintenanceInterval": "Monthly"
+            },
+            {
+                "ID": "Node_07_Career",
+                "Priority": "High",
+                "Status": "Active",
+                "Dependencies": ["Mental", "Finance"],
+                "LastRefactor": "2026-02-01"
+            },
+            {
+                "ID": "Node_08_Friendship",
+                "Priority": "High",
+                "Status": "Active",
+                "Dependencies": ["Community"],
+                "MaintenanceInterval": "Weekly"
+            },
+            {
+                "ID": "Node_09_Learning",
+                "Priority": "High",
+                "Status": "Active",
+                "Volatility": "High",
+                "MaintenanceInterval": "Continuous"
+            },
+            {
+                "ID": "Node_10_Experience",
+                "Priority": "Medium",
+                "Status": "Active",
+                "Volatility": "Low",
+                "MaintenanceInterval": "Monthly"
             }
         ],
         "Constraints": {
             "EnforceBoundaries": true,
+            "BalanceRequired": true,
+            "NoSinglePointOfFailure": true
         }
     }
 }
@@ -168,60 +510,6 @@
             </div>
         </div>
     </section>
-
-    <section id="waitlist" class="waitlist">
-        <div class="container">
-            <div class="waitlist-content">
-                <h2>Join the Waitlist</h2>
-                <p>Be the first to know when The Life Schema launches. Get exclusive updates and special early-bird offers.</p>
-                <form id="waitlist-form" class="waitlist-form">
-                    <div class="form-group">
-                        <input type="email"
-                               id="email"
-                               name="email"
-                               placeholder="Enter your email address"
-                               required
-                               aria-label="Email address">
-                        <button type="submit" class="btn primary">Join Waitlist</button>
-                    </div>
-                    <div id="form-message" class="form-message"></div>
-                </form>
-                <img src="images/903%20Front%20Cover.png" alt="The Life Schema book cover" class="book-cover-featured">
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="content">
-        <div class="container">
-            <h2>About the Book</h2>
-            <div class="about-inner">
-                <img src="images/Author_Greg.png" alt="Author Gregory Hillis" class="author-photo">
-                <div class="about-text">
-                    <p>As an IT professional, you know how to manage complex systems, maintain high-availability enviornments, and document every line of code.  But when it comes to your own life--your health, your finances, your relationships, and your peace of mind--are you running on a legacy codebase full of bugs and "spaghetti logic?</p>
-                    <p>Most productivity systems are "Soft." They focus on feelings and "hustle." The Life Schema is different.  It is a hard-coded Information Archetecture for the analytical mind.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="resources" class="resources">
-        <div class="container">
-            <h2>Downloadable Resources</h2>
-            <div class="resource-grid">
-                <div class="card">
-                    <h3>OS Root</h3>
-                    <p>The complete Life Schema operating system starter files.</p>
-                    <a href="downloads/life.os.zip" class="download-link" download>Download ZIP</a>
-                </div>
-                <div class="card">
-                    <h3>Audio Introduction</h3>
-                    <p>Listen to the introduction to The Life Schema.</p>
-                    <a href="downloads/002_The_Life_Schema_Introduction.mp3" class="download-link" download>Download MP3</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <footer>
         <div class="container">
@@ -276,7 +564,7 @@
 
         // Handle node interactions using mouseover on area elements
         document.querySelectorAll('area[data-node]').forEach(area => {
-            area.addEventListener('mouseover', function() {
+            area.addEventListener('mouseover', function () {
                 const nodeName = this.getAttribute('data-node');
                 const nodeInfo = nodeDescriptions[nodeName];
 
@@ -287,12 +575,111 @@
                 }
             });
 
-            area.addEventListener('mouseout', function() {
+            area.addEventListener('mouseout', function () {
                 document.getElementById('node-description').classList.remove('active');
                 document.getElementById('node-title').textContent = 'Hover over a node';
                 document.getElementById('node-text').textContent = 'Select any node in the diagram above to learn more about its role in your personal operating system.';
             });
         });
+
+        // Assessment form handling
+        const nodes = ['spiritual', 'marriage', 'family', 'mental', 'physical', 'finance', 'career', 'friendship', 'learning', 'experience'];
+
+        document.getElementById('assessment-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const results = {};
+            let allAnswered = true;
+
+            // Check if all questions are answered
+            for (const node of nodes) {
+                const feelingValue = document.querySelector(`input[name="${node}-feeling"]:checked`);
+                const planValue = document.querySelector(`input[name="${node}-plan"]:checked`);
+
+                if (!feelingValue || !planValue) {
+                    allAnswered = false;
+                    break;
+                }
+
+                results[node] = {
+                    feeling: feelingValue.value,
+                    plan: planValue.value,
+                    nodeName: node.charAt(0).toUpperCase() + node.slice(1)
+                };
+            }
+
+            if (!allAnswered) {
+                alert('Please answer all questions before scoring.');
+                return;
+            }
+
+            // Calculate scores and display results
+            displayAssessmentResults(results);
+        });
+
+        function displayAssessmentResults(results) {
+            const feelingMap = {
+                1: 'Very Poor',
+                2: 'Bad',
+                3: 'Neutral',
+                4: 'Good',
+                5: 'Excellent'
+            };
+
+            let totalFeeling = 0;
+            let plansYes = 0;
+            let html = '';
+
+            for (const node of nodes) {
+                const result = results[node];
+                const feeling = parseInt(result.feeling);
+                totalFeeling += feeling;
+                if (result.plan === 'yes') plansYes++;
+
+                const feelingLabel = feelingMap[feeling];
+                html += `
+                            <div class="result-card">
+                                <h4>${result.nodeName}</h4>
+                                <div class="result-row">
+                                    <span class="result-label">Feeling:</span>
+                                    <span class="result-value">${feelingLabel}</span>
+                                </div>
+                                <div class="result-row">
+                                    <span class="result-label">Plan:</span>
+                                    <span class="result-value">${result.plan === 'yes' ? 'Yes ✓' : 'No'}</span>
+                                </div>
+                            </div>
+                        `;
+            }
+
+            // Add summary
+            const averageFeeling = (totalFeeling / nodes.length).toFixed(1);
+            const planPercentage = ((plansYes / nodes.length) * 100).toFixed(0);
+
+            html += `
+                        <div class="result-card" style="grid-column: 1 / -1; background: #e0e7ff; border-top: 4px solid var(--primary);">
+                            <h4>Summary</h4>
+                            <div class="result-row">
+                                <span class="result-label">Average Feeling Score:</span>
+                                <span class="result-value">${averageFeeling}/5</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Nodes with Plans:</span>
+                                <span class="result-value">${plansYes}/${nodes.length} (${planPercentage}%)</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Nodes Needing Plans:</span>
+                                <span class="result-value">${nodes.length - plansYes}</span>
+                            </div>
+                        </div>
+                    `;
+
+            document.getElementById('results-content').innerHTML = html;
+            document.getElementById('assessment-results').style.display = 'block';
+
+            // Scroll to results
+            document.getElementById('assessment-results').scrollIntoView({ behavior: 'smooth' });
+        }
 
         document.getElementById('waitlist-form').addEventListener('submit', async (e) => {
             e.preventDefault();
