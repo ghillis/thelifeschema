@@ -22,6 +22,7 @@
                 <a href="#about">About</a>
                 <a href="#resources">Resources</a>
                 <a href="#readiness-checklist">Readiness Checklist</a>
+                <a href="#waitlist">Waitlist</a>
             </div>
         </nav>
     </header>
@@ -29,7 +30,6 @@
     <section class="hero">
         <div class="container">
             <div class="hero-inner">
-                <img src="images/903%20Front%20Cover.png" alt="The Life Schema book cover" class="book-cover">
                 <div class="hero-text">
                     <h1>Master Your Personal Operating System</h1>
                     <p class="subtitle">A 10-Node approach to refactoring your life, management, and productivity.</p>
@@ -38,6 +38,155 @@
                         <a href="#resources" class="btn secondary">Get Resources</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nodes" class="nodes-section">
+        <div class="container">
+            <h2>The 10 Life Nodes</h2>
+            <p class="section-intro">Hover over any node to explore its purpose and importance</p>
+
+            <div class="nodes-container">
+                <img src="images/10node.png" alt="The Life Schema 10-node diagram" class="nodes-diagram" usemap="#nodes-map">
+                <map name="nodes-map">
+                    <area shape="circle" coords="270,105,30" alt="Spiritual" data-node="Spiritual" class="node-area">
+                    <area shape="circle" coords="240,160,30" alt="Marriage" data-node="Marriage" class="node-area">
+                    <area shape="circle" coords="225,215,30" alt="Family" data-node="Family" class="node-area">
+                    <area shape="circle" coords="240,270,30" alt="Mental" data-node="Mental" class="node-area">
+                    <area shape="circle" coords="270,325,30" alt="Physical" data-node="Physical" class="node-area">
+
+                    <area shape="circle" coords="525,105,30" alt="Finance" data-node="Finance" class="node-area">
+                    <area shape="circle" coords="555,160,30" alt="Career" data-node="Career" class="node-area">
+                    <area shape="circle" coords="570,215,30" alt="Friendship" data-node="Friendship" class="node-area">
+                    <area shape="circle" coords="555,270,30" alt="Learning" data-node="Learning" class="node-area">
+                    <area shape="circle" coords="525,325,30" alt="Experience" data-node="Experience" class="node-area">
+                </map>
+
+                <div id="node-description" class="node-description">
+                    <h3 id="node-title">Hover over a node</h3>
+                    <p id="node-text">Select any node in the diagram above to learn more about its role in your personal operating system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="readiness-checklist" class="readiness-checklist">
+        <div class="container">
+            <h2>The Node Readiness Checklist</h2>
+            <p class="section-intro">Evaluate each node of your life using these four architectural principles:</p>
+
+            <div class="checklist-grid">
+                <div class="checklist-item">
+                    <h3>1. Encapsulation & Clarity</h3>
+                    <ul>
+                        <li>Defined Boundaries: Have you clearly defined what this node includes and excludes?</li>
+                        <li>Single Responsibility: Is this node focused on one primary outcome?</li>
+                        <li>Naming Convention: Can you describe this node in a single, clear sentence?</li>
+                    </ul>
+                </div>
+
+                <div class="checklist-item">
+                    <h3>2. Volatility Assessment</h3>
+                    <ul>
+                        <li>Internal Volatility: How often do the requirements change due to your choices?</li>
+                        <li>External Volatility: How susceptible is it to environmental changes?</li>
+                        <li>Brittle Points: Would failure in one part crash the entire node?</li>
+                    </ul>
+                </div>
+
+                <div class="checklist-item">
+                    <h3>3. Interface & Integration</h3>
+                    <ul>
+                        <li>Dependencies: Which other nodes does this one rely on?</li>
+                        <li>Communication Protocol: How do you track progress here?</li>
+                        <li>Conflict Resolution: Do you have a "catch block" for node conflicts?</li>
+                    </ul>
+                </div>
+
+                <div class="checklist-item">
+                    <h3>4. Performance & Health</h3>
+                    <ul>
+                        <li>Resource Allocation: Over or under-provisioning?</li>
+                        <li>Current Status: Is this node currently set to Active/Healthy?</li>
+                        <li>Technical Debt: Any "quick fixes" that need proper refactoring?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="scoring-section">
+                <h3>How to Score a Node</h3>
+                <p>Rate each bullet above on a scale of 1–5. Multiply by the number of items to get your total:</p>
+                <ul class="score-list">
+                    <li><strong>18–20 Points:</strong> Production Ready. Stable and requires only routine maintenance.</li>
+                    <li><strong>12–17 Points:</strong> Refactoring Recommended. Significant "code smells" need addressing.</li>
+                    <li><strong>Below 12 Points:</strong> System Failure. Needs immediate architectural intervention.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="code-preview">
+        <div class="container">
+            <h2>Refactor Your Life via CLI</h2>
+            <p>Define your life architecture with the precision of a system architect.</p>
+            <div class="code-window">
+                <div class="code-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="file-name">LifeSchema.json</span>
+                </div>
+                <pre><code>
+{
+    "LifeSchema": {
+        "Version": "1.0.0",
+        "Author": "Gregory Hillis",
+        "Target": "Personal_Operating_System",
+        "Nodes": [
+            {
+                "ID": "Node_01_Spiritual",
+                "Priority": "Critical",
+                "Status": "Active",
+                "Volatility": "Low",
+                "MaintenanceInterval": "Daily"
+            },
+            {
+                "ID": "Node_02_Marriage",
+                "Priority": "Critical",
+                "Status": "Active",
+                "Dependencies": ["Mental", "Finance"],
+                "LastRefactor": "2026-04-15"
+            }
+        ],
+        "Constraints": {
+            "EnforceBoundaries": true,
+        }
+    }
+}
+</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="waitlist" class="waitlist">
+        <div class="container">
+            <div class="waitlist-content">
+                <h2>Join the Waitlist</h2>
+                <p>Be the first to know when The Life Schema launches. Get exclusive updates and special early-bird offers.</p>
+                <form id="waitlist-form" class="waitlist-form">
+                    <div class="form-group">
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               placeholder="Enter your email address"
+                               required
+                               aria-label="Email address">
+                        <button type="submit" class="btn primary">Join Waitlist</button>
+                    </div>
+                    <div id="form-message" class="form-message"></div>
+                </form>
+                <img src="images/903%20Front%20Cover.png" alt="The Life Schema book cover" class="book-cover-featured">
             </div>
         </div>
     </section>
@@ -73,43 +222,6 @@
         </div>
     </section>
 
-    <section id="about" class="readiness-checklist">
-        <div class="container">
-            <h2>The Node Readiness Checklist</h2>
-            <div class="about-inner">
-                <div class="about-text">
-                    <h2>The Node Readiness Checklist</h2>
-                    <h3>1. Encapsulation & Clarity</h3>
-                    <p>Defined Boundaries: Have you clearly defined what this node includes and, more importantly, what it doesn't?</p>
-                    <p>Single Responsibility: Is this node focused on one primary outcome, or is it "monolithic" and overloaded with unrelated tasks?</p>
-                    <p>Naming Convention: Can you describe the current state of this node in a single, clear sentence?</p>
-
-                    <h3>2. Volatility Assessment</h3>
-                    <p>Internal Volatility: How often do the "requirements" of this node change due to your own choices?</p>
-                    <p>External Volatility: How much of this node is susceptible to changes in the "environment" (e.g., market shifts, family emergencies)?</p>
-                    <p>Brittle Points: If one part of this node fails (e.g., losing a specific client in 'Career'), does the entire node crash?</p>
-
-                    <h3>3. Interface & Integration</h3>
-                    <p>Dependencies: Which other nodes does this one rely on? (e.g., 'Marriage' often has a high dependency on 'Mental' and 'Finance').</p>
-                    <p>Communication Protocol: How do you track progress here? (e.g., a color-coded Google Calendar or a Monthly Bills spreadsheet).</p>
-                    <p>Conflict Resolution: Do you have a "catch block" for when two nodes conflict, such as 'Career' demands infringing on 'Family' time?</p>
-
-                    <h3>4. Performance & Health</h3>
-                    <p>Resource Allocation: Are you over-provisioning (spending too much time/money) or under-provisioning this node?</p>
-                    <p>Current Column Status: In your Balance Sheet logic, is this node currently set to TRUE (Active/Healthy)?</p>
-                    <p>Technical Debt: Are there "quick fixes" in this area of your life that you haven't properly refactored yet?</p>
-
-                    <h3>How to Score a Node</h3>
-                    <p>To get a "Readiness Score," rate each of the bullets above on a scale of 1–5.</p>
-                    <ul>
-                        <li>18–20 Points: Production Ready. This node is stable and requires only routine maintenance.</li>
-                        <li>12–17 Points: Refactoring Recommended. There are significant "code smells" in your lifestyle that need addressing.</li>
-                        <li>Below 12 Points: System Failure. This node is likely causing "cascading failures" in other areas of your life and needs immediate architectural intervention.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <footer>
         <div class="container">
@@ -117,5 +229,133 @@
         </div>
     </footer>
 
+    <script>
+        // Node descriptions
+        const nodeDescriptions = {
+            Spiritual: {
+                title: "Spiritual",
+                description: "Global Configuration: Defines the constants every other function relies on. If your root variables are wrong, the entire application will produce the wrong output."
+            },
+            Marriage: {
+                title: "Marriage",
+                description: "The High-Availability Cluster: In enterprise architecture, a High-Availability (HA) Cluster consists of two nodes that are perfectly synced. If one node encounters a heavy load or a hardware failure, the other picks up the slack. They share a heartbeat. If the heartbeat is lost, you get a “Split-Brain” scenario—and data corruption is inevitable."
+            },
+            Family: {
+                title: "Family",
+                description: "The LAN: This includes children, parents, and siblings. In IT terms, a LAN requires constant management of Bandwidth and Permissions. If the LAN is cluttered with “Broadcast Storms” (constant chaotic communication) or “Packet Loss” (neglect), the entire system feels the lag."
+            },
+            Mental: {
+                title: "Mental",
+                description: "CPU & RAM: The central processing unit of your life. Every other node—from Financial to Spiritual—requires “Clock Cycles” from your brain. If your Mental Node is overwhelmed, you experience CPU Throttling: you still “work,” but you do it at 10% speed."
+            },
+            Physical: {
+                title: "Physical",
+                description: "The Bare Metal: You can have the most sophisticated software in the world (Node 04: Mental), but if the motherboard cracks or the power supply fails, the software is irrelevant."
+            },
+            Finance: {
+                title: "Finance",
+                description: "Resource Allocation: In a business environment, no project moves forward without Funding. If you overspend on one “Environment” (e.g., Node 10: Experience/Travel), you may find yourself with a “Service Outage” in another (e.g., Node 03: Family/Housing)."
+            },
+            Career: {
+                title: "Career",
+                description: "Value Delivery: In a professional tech stack, the Production Environment is where the code actually runs for the end-user. It’s where the value is delivered and where the revenue is generated. You can have a perfect local development environment (Personal Growth), but if your “Production” is buggy, slow, or offline, your reputation—and your income—will plummet."
+            },
+            Friendship: {
+                title: "Friendship",
+                description: "The Peer-to-Peer Support: No server is an island. In modern computing, we rely on Peer-to-Peer (P2P) Networks for distributed storage and processing. If one node in a P2P network goes offline, the other nodes provide the “Redundancy” needed to keep the data alive."
+            },
+            Learning: {
+                title: "Learning",
+                description: "Continuous Integration/Continuous Deployment: In technology, “Legacy” is a polite word for “dying.” If a system stops receiving updates, it becomes a security risk and eventually loses compatibility with the rest of the world. Node 09: Learning is your CI/CD pipeline—the process of continuously integrating new knowledge and deploying new capabilities to your “Production Environment.”"
+            },
+            Experience: {
+                title: "Experience",
+                description: "Front-End Delight: You can have a perfectly optimized backend—massive database (Financial), high-speed CPU (Mental), and stable power (Physical)—but if the User Interface (UI) is miserable, the product is a failure."
+            }
+        };
+
+        // Handle node interactions using mouseover on area elements
+        document.querySelectorAll('area[data-node]').forEach(area => {
+            area.addEventListener('mouseover', function() {
+                const nodeName = this.getAttribute('data-node');
+                const nodeInfo = nodeDescriptions[nodeName];
+
+                if (nodeInfo) {
+                    document.getElementById('node-title').textContent = nodeInfo.title;
+                    document.getElementById('node-text').textContent = nodeInfo.description;
+                    document.getElementById('node-description').classList.add('active');
+                }
+            });
+
+            area.addEventListener('mouseout', function() {
+                document.getElementById('node-description').classList.remove('active');
+                document.getElementById('node-title').textContent = 'Hover over a node';
+                document.getElementById('node-text').textContent = 'Select any node in the diagram above to learn more about its role in your personal operating system.';
+            });
+        });
+
+        document.getElementById('waitlist-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value.trim();
+            const messageDiv = document.getElementById('form-message');
+            const form = document.getElementById('waitlist-form');
+            const submitBtn = form.querySelector('button[type="submit"]');
+
+            // Reset message
+            messageDiv.textContent = '';
+            messageDiv.className = 'form-message';
+
+            // Validate email
+            if (!email || !validateEmail(email)) {
+                messageDiv.textContent = 'Please enter a valid email address.';
+                messageDiv.className = 'form-message error';
+                return;
+            }
+
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Joining...';
+
+            try {
+                // Store email in localStorage (for demo purposes)
+                const waitlist = JSON.parse(localStorage.getItem('waitlist') || '[]');
+
+                // Check if email already exists
+                if (waitlist.includes(email)) {
+                    messageDiv.textContent = 'This email is already on the waitlist!';
+                    messageDiv.className = 'form-message info';
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Join Waitlist';
+                    return;
+                }
+
+                // Add email to waitlist
+                waitlist.push(email);
+                localStorage.setItem('waitlist', JSON.stringify(waitlist));
+
+                // Success message
+                messageDiv.textContent = '✓ You\'ve been added to the waitlist! Check your email for updates.';
+                messageDiv.className = 'form-message success';
+
+                // Clear form
+                form.reset();
+
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Join Waitlist';
+            } catch (error) {
+                messageDiv.textContent = 'Something went wrong. Please try again.';
+                messageDiv.className = 'form-message error';
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Join Waitlist';
+            }
+        });
+
+        function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+    </script>
 </body>
 </html>
