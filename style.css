@@ -261,7 +261,7 @@ footer { padding: 40px 0; text-align: center; font-size: 0.9rem; color: #94a3b8;
     text-align: center;
     font-size: 1.1rem;
     color: var(--text);
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -271,7 +271,7 @@ footer { padding: 40px 0; text-align: center; font-size: 0.9rem; color: #94a3b8;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -282,12 +282,39 @@ footer { padding: 40px 0; text-align: center; font-size: 0.9rem; color: #94a3b8;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 20px 40px -8px rgb(0 0 0 / 0.2);
-    cursor: pointer;
 }
 
-img[usemap] area {
+.node-buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.node-btn {
+    padding: 12px 16px;
+    border: 2px solid var(--primary);
+    background: white;
+    color: var(--primary);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
     cursor: pointer;
-    transition: opacity 0.2s ease;
+    transition: all 0.3s ease;
+}
+
+.node-btn:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.node-btn.active {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
 }
 
 .node-description {
@@ -298,14 +325,7 @@ img[usemap] area {
     width: 100%;
     min-height: 150px;
     border-left: 4px solid var(--primary);
-    opacity: 0.6;
     transition: all 0.3s ease;
-}
-
-.node-description.active {
-    opacity: 1;
-    border-left-color: var(--accent);
-    box-shadow: 0 20px 40px -8px rgb(0 0 0 / 0.15);
 }
 
 .node-description h3 {
@@ -327,6 +347,16 @@ img[usemap] area {
 
     .nodes-diagram {
         max-width: 100%;
+    }
+
+    .node-buttons {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 8px;
+    }
+
+    .node-btn {
+        padding: 10px 8px;
+        font-size: 0.8rem;
     }
 
     .node-description {

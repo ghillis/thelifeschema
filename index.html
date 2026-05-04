@@ -45,27 +45,29 @@
 
     <section id="nodes" class="nodes-section">
         <div class="container">
-            <!--<h2>The 10 Life Nodes</h2>-->
-            <!--<p class="section-intro">A 10-Node approach to refactoring your life, management, and productivity</p>-->
-            <div class="nodes-container">
-                <img src="images/10node.png" alt="The Life Schema 10-node diagram" class="nodes-diagram" usemap="#nodes-map">
-                <map name="nodes-map">
-                    <area shape="circle" coords="270,105,30" alt="Spiritual" data-node="Spiritual" class="node-area">
-                    <area shape="circle" coords="240,160,30" alt="Marriage" data-node="Marriage" class="node-area">
-                    <area shape="circle" coords="225,215,30" alt="Family" data-node="Family" class="node-area">
-                    <area shape="circle" coords="240,270,30" alt="Mental" data-node="Mental" class="node-area">
-                    <area shape="circle" coords="270,325,30" alt="Physical" data-node="Physical" class="node-area">
+            <h2>The 10 Life Nodes</h2>
+            <p class="section-intro">Click any node to explore its purpose and importance</p>
 
-                    <area shape="circle" coords="525,105,30" alt="Finance" data-node="Finance" class="node-area">
-                    <area shape="circle" coords="555,160,30" alt="Career" data-node="Career" class="node-area">
-                    <area shape="circle" coords="570,215,30" alt="Friendship" data-node="Friendship" class="node-area">
-                    <area shape="circle" coords="555,270,30" alt="Learning" data-node="Learning" class="node-area">
-                    <area shape="circle" coords="525,325,30" alt="Experience" data-node="Experience" class="node-area">
-                </map>
+            <div class="nodes-container">
+                <img src="images/10node.png" alt="The Life Schema 10-node diagram" class="nodes-diagram">
+
+                <div class="node-buttons">
+                    <button class="node-btn" data-node="Spiritual">Spiritual</button>
+                    <button class="node-btn" data-node="Marriage">Marriage</button>
+                    <button class="node-btn" data-node="Family">Family</button>
+                    <button class="node-btn" data-node="Mental">Mental</button>
+                    <button class="node-btn" data-node="Physical">Physical</button>
+                    <button class="node-btn" data-node="Finance">Finance</button>
+                    <button class="node-btn" data-node="Career">Career</button>
+                    <button class="node-btn" data-node="Friendship">Friendship</button>
+                    <button class="node-btn" data-node="Learning">Learning</button>
+                    <button class="node-btn" data-node="Experience">Experience</button>
+                </div>
 
                 <div id="node-description" class="node-description">
-                    <h3 id="node-title">Hover over a node</h3>
-                    <p id="node-text">Select any node in the diagram above to learn more about its role in your personal operating system.</p>
+                    <h3 id="node-title">Select a Node</h3>
+                    <p id="node-text">Click any node button above to learn more about its role in your personal operating system.</p>
+                    <div id="node-links" class="node-links"></div>
                 </div>
             </div>
         </div>
@@ -522,11 +524,18 @@
         const nodeDescriptions = {
             Spiritual: {
                 title: "Spiritual",
-                description: "Global Configuration: Defines the constants every other function relies on. If your root variables are wrong, the entire application will produce the wrong output."
+                description: "Global Configuration: Defines the constants every other function relies on. If your root variables are wrong, the entire application will produce the wrong output.",
+                links: [
+                    { text: "Thru The Bible (ttb.org)", url: "https://www.ttb.org" },
+                    { text: "I Don't Have Enough Faith to Be an Atheist", url: "https://www.amazon.com/Dont-Have-Enough-Faith-Atheist/dp/1581345615" }
+                ]
             },
             Marriage: {
                 title: "Marriage",
-                description: "The High-Availability Cluster: In enterprise architecture, a High-Availability (HA) Cluster consists of two nodes that are perfectly synced. If one node encounters a heavy load or a hardware failure, the other picks up the slack. They share a heartbeat. If the heartbeat is lost, you get a “Split-Brain” scenario—and data corruption is inevitable."
+                description: "The High-Availability Cluster: In enterprise architecture, a High-Availability (HA) Cluster consists of two nodes that are perfectly synced. If one node encounters a heavy load or a hardware failure, the other picks up the slack. They share a heartbeat. If the heartbeat is lost, you get a “Split-Brain” scenario—and data corruption is inevitable.",
+                links: [
+                    { text: "The Five Love Languages: The Secret to Love That Lasts", url: "https://www.amazon.com/Five-Love-Languages-Secret-Lasts/dp/B079B7PJMV/ref=sr_1_1?crid=1SMX48W5A57JP&dib=eyJ2IjoiMSJ9.MeElUaCPU9PbSpr3CMLRv181ptFJCo8eMrX_M9gyg93AQ-PQanmydq5xkPyM5tHwluO9ItOi3Nj1o8OJWUduRj3lfscwbL50j1ARrZVCo475KWYxQllwvp1puwtXdO2M-gOdW8EApk7LlgRs89FM7jBBzHOZtOuEaDboagbdTwdA15AfY4K-Wne-gxejf8NIdK6Rudv-SG0-9t0jSgNq56bfMcxiXXCIdjH4k9pju4I.oXmOFNUpPuYefmmkbxhIUQTUAGmByyOPnxBjeWq3qZk&dib_tag=se&keywords=7+love+languages&qid=1777933357&sprefix=7+love+%2Caps%2C181&sr=8-1" }
+                ]
             },
             Family: {
                 title: "Family",
@@ -534,23 +543,39 @@
             },
             Mental: {
                 title: "Mental",
-                description: "CPU & RAM: The central processing unit of your life. Every other node—from Financial to Spiritual—requires “Clock Cycles” from your brain. If your Mental Node is overwhelmed, you experience CPU Throttling: you still “work,” but you do it at 10% speed."
+                description: "CPU & RAM: The central processing unit of your life. Every other node—from Financial to Spiritual—requires “Clock Cycles” from your brain. If your Mental Node is overwhelmed, you experience CPU Throttling: you still “work,” but you do it at 10% speed.",
+                links: [
+                    { text: "Limitless: Upgrade Your Brain, Learn Anything Faster, and Unlock Your Exceptional Life", url: "https://www.amazon.com/Limitless-Upgrade-Anything-Faster-Exceptional/dp/1401958230/ref=sr_1_4?crid=DAA14FXOC5DZ&dib=eyJ2IjoiMSJ9.g0awVvY3JvDrveI78RnJVJKFQxBS35hQtfTmpKO3CAYyu8M-UrZke9iJ-68N6UmW7fliICXrovmTo1-iqWalctVejl-L9Ri_RP_zd_QLHBKk3aGu1l9ponL6-mkzgKo-4bLYim27yRG-doyceefaK-G8-IT-BP2mWVTIeamEsBj1hYvtdy6-CcHyBYzh0hJz_7sL5uNgUU8BIBb4tqy-07yogWL7pTXnDAs2skI6D5U.H07f9zIdB9c1KpiYwZfKfsno_PlamR_YdwZ4--7leNs&dib_tag=se&keywords=limitless&qid=1777931136&s=books&sprefix=Limitle%2Cstripbooks%2C229&sr=1-4" }
+                ]
             },
             Physical: {
                 title: "Physical",
-                description: "The Bare Metal: You can have the most sophisticated software in the world (Node 04: Mental), but if the motherboard cracks or the power supply fails, the software is irrelevant."
+                description: "The Bare Metal: You can have the most sophisticated software in the world (Node 04: Mental), but if the motherboard cracks or the power supply fails, the software is irrelevant.",
+                links: [
+                    { text: "Why We Sleep: Unlocking the Power of Sleep", url: "https://www.amazon.com/Why-We-Sleep-Unlocking-Dreams/dp/0743273656" },
+                    { text: "Atomic Habits: Tiny Changes, Remarkable Results", url: "https://www.amazon.com/Atomic-Habits-Tiny-Changes-Remarkable/dp/0735211299" }
+                ]
             },
             Finance: {
                 title: "Finance",
-                description: "Resource Allocation: In a business environment, no project moves forward without Funding. If you overspend on one “Environment” (e.g., Node 10: Experience/Travel), you may find yourself with a “Service Outage” in another (e.g., Node 03: Family/Housing)."
+                description: "Resource Allocation: In a business environment, no project moves forward without Funding. If you overspend on one “Environment” (e.g., Node 10: Experience/Travel), you may find yourself with a “Service Outage” in another (e.g., Node 03: Family/Housing).",
+                links: [
+                    { text: "The Total Money Makeover Updated and Expanded: A Proven Plan for Financial Peace", url: "https://www.amazon.com/Total-Money-Makeover-Updated-Expanded/dp/140034252X/ref=sr_1_1_sspa?crid=3DBPLNG0TDYYC&dib=eyJ2IjoiMSJ9.eQnJ35WI7z15kBkKggRgCumdeDnGCpAK2Whb47lF3YGl67s6_LE-hCRAC5eqgPLYxr6s9lZF99hAkXazdQRsq9X5eidmvn8RR2Ufttjed3-aYAebaFIeFkHv0Intm1p-LAUby-UD3lxxGOxK94c1pRMfAtregiV2qmFZz8V2yeC1kw8fgZDeG1qLA-QqxGBGFInfxemSkhiCbd0Rfz7IJUwJ6c8-PpBT2I9Y6GgbujAm97o3c7aNh42PibJ8gqf775WBsBsLL1HtHrEbVmq917v_1UkDXBKMfqx4pTi2P8o.X4AqWoZ7BjcKXnA_hhMKcdt5QRIZgnEtLADkQ6-0iZw&dib_tag=se&keywords=dave+ramsey&qid=1777931319&s=books&sprefix=dave+ram%2Cstripbooks%2C292&sr=1-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1" }
+                ]
             },
             Career: {
                 title: "Career",
-                description: "Value Delivery: In a professional tech stack, the Production Environment is where the code actually runs for the end-user. It’s where the value is delivered and where the revenue is generated. You can have a perfect local development environment (Personal Growth), but if your “Production” is buggy, slow, or offline, your reputation—and your income—will plummet."
+                description: "Value Delivery: In a professional tech stack, the Production Environment is where the code actually runs for the end-user. It’s where the value is delivered and where the revenue is generated. You can have a perfect local development environment (Personal Growth), but if your “Production” is buggy, slow, or offline, your reputation—and your income—will plummet.",
+                links: [
+                    { text: "The Proximity Principle: The Proven Strategy That Will Lead to a Career You Love", url: "https://www.amazon.com/Proximity-Principle-Proven-Strategy-Career/dp/0978562038" }
+                ]
             },
             Friendship: {
                 title: "Friendship",
-                description: "The Peer-to-Peer Support: No server is an island. In modern computing, we rely on Peer-to-Peer (P2P) Networks for distributed storage and processing. If one node in a P2P network goes offline, the other nodes provide the “Redundancy” needed to keep the data alive."
+                description: "The Peer-to-Peer Support: No server is an island. In modern computing, we rely on Peer-to-Peer (P2P) Networks for distributed storage and processing. If one node in a P2P network goes offline, the other nodes provide the “Redundancy” needed to keep the data alive.",
+                links: [
+                    { text: "Made for Friendship: The Relationship That Halves Our Sorrows and Doubles Our Joys", url: "https://www.amazon.com/Made-Friendship-Relationship-Sorrows-Doubles/dp/B0BV7HGFSK/ref=sr_1_3?crid=3QH96X4AF1XAC&dib=eyJ2IjoiMSJ9.JTlnN5QrvaAhS0Oq1f_6zpE9l9hnL0xT-mXALtBRq1ZIBVM0Qph5A81RIDbVC5A6XFRHeL10uVtiQZcrD_hbRRtWNqTn1R_zgS1HIJ6idK9BEcShEgENYC-8dBxiURHAKuCbJK228QRlQizzfyO71bWzG-uKsA8FFeB21TPVnCnEiMOAksKkHmmAeIHpP_z_CyWmNHHtUHFnqqcyMxewt43eEJM920mGuySerXwK9W8.hAkL50i6puqzJ0gOwXynVfDLby9_56-S5Ve49Wi48gw&dib_tag=se&keywords=friendship&qid=1777932089&s=books&sprefix=friendship%2Cstripbooks%2C199&sr=1-3" }
+                ]
             },
             Learning: {
                 title: "Learning",
@@ -558,27 +583,40 @@
             },
             Experience: {
                 title: "Experience",
-                description: "Front-End Delight: You can have a perfectly optimized backend—massive database (Financial), high-speed CPU (Mental), and stable power (Physical)—but if the User Interface (UI) is miserable, the product is a failure."
+                description: "Front-End Delight: You can have a perfectly optimized backend—massive database (Financial), high-speed CPU (Mental), and stable power (Physical)—but if the User Interface (UI) is miserable, the product is a failure.",
+                links: [
+                    { text: "IDesign.net", url: "https://idesign.net" },
+                    { text: "Righting Software", url: "https://www.amazon.com/Righting-Software-Juval-L%C3%B6wy/dp/0136524036/ref=sr_1_1?crid=1Q5JD36L9QJAN&dib=eyJ2IjoiMSJ9.FMKFMAYC_gAY4bZktRmyXCqHCLcSS1IonCliE_H1pZG8Vc2ZvcGwy2gzW5mxTQFYQdmKNjoyCBQ9llQ6T_yiaH0BAg-FN2QcI0h4-FpBPVDs-zxjnjkWkXHFBrhpOgxJfutMCE_ch-gf0SN2bukVviA7pyToVe__rDWcTQuXMpYgMRPPsGspe7hkYEQe8hl1f1LHYoy7xlfguhS9CAvV9rjRwju8Zf7D-sXik1pyD2c.XsqyTFKnU08f-QaGIBkEO1-RW8cqIr6cCihBLjT5Zhs&dib_tag=se&keywords=righting+software&qid=1777931691&s=books&sprefix=righting+softwar%2Cstripbooks%2C250&sr=1-1" }
+                ]
             }
         };
 
-        // Handle node interactions using mouseover on area elements
-        document.querySelectorAll('area[data-node]').forEach(area => {
-            area.addEventListener('mouseover', function () {
+        // Handle node button interactions
+        document.querySelectorAll('.node-btn').forEach(button => {
+            button.addEventListener('click', function() {
                 const nodeName = this.getAttribute('data-node');
                 const nodeInfo = nodeDescriptions[nodeName];
 
                 if (nodeInfo) {
+                    // Update description
                     document.getElementById('node-title').textContent = nodeInfo.title;
                     document.getElementById('node-text').textContent = nodeInfo.description;
-                    document.getElementById('node-description').classList.add('active');
-                }
-            });
 
-            area.addEventListener('mouseout', function () {
-                document.getElementById('node-description').classList.remove('active');
-                document.getElementById('node-title').textContent = 'Hover over a node';
-                document.getElementById('node-text').textContent = 'Select any node in the diagram above to learn more about its role in your personal operating system.';
+                    // Render links if they exist
+                    const linksDiv = document.getElementById('node-links');
+                    linksDiv.innerHTML = '';
+
+                    if (nodeInfo.links && nodeInfo.links.length > 0) {
+                        const linksHTML = '<div class="suggested-links"><strong>Suggested Resources:</strong>' +
+                            nodeInfo.links.map(link => `<br /><a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.text}</a>`).join('') +
+                            '</div>';
+                        linksDiv.innerHTML = linksHTML;
+                    }
+
+                    // Update active button state
+                    document.querySelectorAll('.node-btn').forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                }
             });
         });
 
