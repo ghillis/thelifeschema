@@ -719,68 +719,21 @@
             document.getElementById('assessment-results').scrollIntoView({ behavior: 'smooth' });
         }
 
-        document.getElementById('waitlist-form').addEventListener('submit', async (e) => {
-            e.preventDefault();
 
-            const email = document.getElementById('email').value.trim();
-            const messageDiv = document.getElementById('form-message');
-            const form = document.getElementById('waitlist-form');
-            const submitBtn = form.querySelector('button[type="submit"]');
-
-            // Reset message
-            messageDiv.textContent = '';
-            messageDiv.className = 'form-message';
-
-            // Validate email
-            if (!email || !validateEmail(email)) {
-                messageDiv.textContent = 'Please enter a valid email address.';
-                messageDiv.className = 'form-message error';
-                return;
-            }
-
-            // Disable submit button
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Joining...';
-
-            try {
-                // Store email in localStorage (for demo purposes)
-                const waitlist = JSON.parse(localStorage.getItem('waitlist') || '[]');
-
-                // Check if email already exists
-                if (waitlist.includes(email)) {
-                    messageDiv.textContent = 'This email is already on the waitlist!';
-                    messageDiv.className = 'form-message info';
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Join Waitlist';
-                    return;
-                }
-
-                // Add email to waitlist
-                waitlist.push(email);
-                localStorage.setItem('waitlist', JSON.stringify(waitlist));
-
-                // Success message
-                messageDiv.textContent = '✓ You\'ve been added to the waitlist! Check your email for updates.';
-                messageDiv.className = 'form-message success';
-
-                // Clear form
-                form.reset();
-
-                // Re-enable button
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Join Waitlist';
-            } catch (error) {
-                messageDiv.textContent = 'Something went wrong. Please try again.';
-                messageDiv.className = 'form-message error';
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Join Waitlist';
-            }
-        });
 
         function validateEmail(email) {
             const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return regex.test(email);
         }
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxYANAg9514hjQIu8sy0DLFk54jZdWrvfiLbFYAP9VGSVRDEk6hj77emqb3alsvqEPi/exec';       
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("System Synced. You are on the list!"))
+            .catch(error => console.error('Error!', error.message));
+        });
     </script>
 </body>
 </html>
