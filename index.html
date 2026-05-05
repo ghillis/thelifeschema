@@ -727,13 +727,29 @@
         }
 
         const scriptURL = 'https://script.google.com/macros/s/AKfycbyKeICgKyTN0gp4RNv3ytPH277ggppPkYfxnAdTRtRfU1NSaETRWeNla6UUCN9W7Q9ZqQ/exec';       
+  
+  // 2. Explicitly define 'form' by selecting it from the document
+  // Make sure your <form> tag has id="waitlist-form"
+  const form = document.querySelector('#waitlist-form');
 
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => alert("System Synced. You are on the list!"))
-            .catch(error => console.error('Error!', error.message));
-        });
-    </script>
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    
+    // Optional: Show a "Syncing" status to the user
+    console.log("Initializing Node 08 Sync...");
+
+    fetch(scriptURL, { 
+      method: 'POST', 
+      body: new FormData(form)
+    })
+      .then(response => {
+        alert("System Synced. You are on the list!");
+        form.reset(); // Clear the input after success
+      })
+      .catch(error => {
+        console.error('System Error!', error.message);
+        alert("Sync failed. Check console logs.");
+      });
+  });    </script>
 </body>
 </html>
