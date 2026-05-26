@@ -23,7 +23,7 @@
                 <a href="#resources">Resources</a>
                 <a href="#readiness-checklist">Readiness Checklist</a>
                 <a href="#assessment">Assessment</a>
-                <a href="#waitlist">Waitlist</a>
+                <a href="#waitlist">Wait list</a>
             </div>
         </nav>
     </header>
@@ -76,7 +76,7 @@
     <section id="waitlist" class="waitlist">
         <div class="container">
             <div class="waitlist-content">
-                <h2>Join the Waitlist</h2>
+                <h2>Join the Wait list</h2>
                 <p>Be the first to know when The Life Schema launches. Get exclusive updates and special early-bird offers.</p>
                 <form id="waitlist-form" class="waitlist-form">
                     <div class="form-group">
@@ -86,7 +86,7 @@
                                placeholder="Enter your email address"
                                required
                                aria-label="Email address">
-                        <button type="submit" class="btn primary">Join Waitlist</button>
+                        <button type="submit" class="btn primary">Join Wait list</button>
                     </div>
                     <div id="form-message" class="form-message"></div>
                 </form>
@@ -101,8 +101,8 @@
             <div class="about-inner">
                 <img src="images/Author_Greg.png" alt="Author Gregory Hillis" class="author-photo">
                 <div class="about-text">
-                    <p>As an IT professional, you know how to manage complex systems, maintain high-availability enviornments, and document every line of code.  But when it comes to your own life--your health, your finances, your relationships, and your peace of mind--are you running on a legacy codebase full of bugs and "spaghetti logic?</p>
-                    <p>Most productivity systems are "Soft." They focus on feelings and "hustle." The Life Schema is different.  It is a hard-coded Information Archetecture for the analytical mind.</p>
+                    <p>As an IT professional, you know how to manage complex systems, maintain high-availability environments, and document every line of code.  But when it comes to your own life--your health, your finances, your relationships, and your peace of mind--are you running on a legacy codebase full of bugs and "spaghetti logic?</p>
+                    <p>Most productivity systems are "Soft." They focus on feelings and "hustle." The Life Schema is different.  It is a hard-coded Information Architecture for the analytical mind.</p>
                 </div>
             </div>
         </div>
@@ -748,19 +748,19 @@
 
                 // Check if email already exists
                 if (waitlist.includes(email)) {
-                    messageDiv.textContent = 'This email is already on the waitlist!';
+                    messageDiv.textContent = 'This email is already on the wait list!';
                     messageDiv.className = 'form-message info';
                     submitBtn.disabled = false;
-                    submitBtn.textContent = 'Join Waitlist';
+                    submitBtn.textContent = 'Join Wait list';
                     return;
                 }
 
-                // Add email to waitlist
+                // Add email to wait list
                 waitlist.push(email);
                 localStorage.setItem('waitlist', JSON.stringify(waitlist));
 
                 // Success message
-                messageDiv.textContent = '✓ You\'ve been added to the waitlist! Check your email for updates.';
+                messageDiv.textContent = '✓ You\'ve been added to the wait list! Check your email for updates.';
                 messageDiv.className = 'form-message success';
 
                 // Clear form
@@ -768,12 +768,12 @@
 
                 // Re-enable button
                 submitBtn.disabled = false;
-                submitBtn.textContent = 'Join Waitlist';
+                submitBtn.textContent = 'Join Wait list';
             } catch (error) {
                 messageDiv.textContent = 'Something went wrong. Please try again.';
                 messageDiv.className = 'form-message error';
                 submitBtn.disabled = false;
-                submitBtn.textContent = 'Join Waitlist';
+                submitBtn.textContent = 'Join Wait list';
             }
         });
 
