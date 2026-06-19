@@ -11,7 +11,8 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lexend:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -28,7 +29,7 @@
         </nav>
     </header>
 
-    <!--<section class="hero">
+    <section class="hero">
         <div class="container">
             <div class="hero-inner">
                 <div class="hero-text">
@@ -41,7 +42,7 @@
                 </div>
             </div>
         </div>
-    </section>-->
+    </section>
 
     <section id="nodes" class="nodes-section">
         <div class="container">
@@ -52,16 +53,16 @@
                 <img src="images/10node.png" alt="The Life Schema 10-node diagram" class="nodes-diagram">
 
                 <div class="node-buttons">
-                    <button class="node-btn" data-node="Spiritual">Spiritual</button>
-                    <button class="node-btn" data-node="Marriage">Marriage</button>
-                    <button class="node-btn" data-node="Family">Family</button>
-                    <button class="node-btn" data-node="Mental">Mental</button>
-                    <button class="node-btn" data-node="Physical">Physical</button>
-                    <button class="node-btn" data-node="Finance">Finance</button>
-                    <button class="node-btn" data-node="Career">Career</button>
-                    <button class="node-btn" data-node="Friendship">Friendship</button>
-                    <button class="node-btn" data-node="Learning">Learning</button>
-                    <button class="node-btn" data-node="Experience">Experience</button>
+                    <button class="node-btn" data-node="Spiritual" aria-selected="false">Spiritual</button>
+                    <button class="node-btn" data-node="Marriage" aria-selected="false">Marriage</button>
+                    <button class="node-btn" data-node="Family" aria-selected="false">Family</button>
+                    <button class="node-btn" data-node="Mental" aria-selected="false">Mental</button>
+                    <button class="node-btn" data-node="Physical" aria-selected="false">Physical</button>
+                    <button class="node-btn" data-node="Finance" aria-selected="false">Finance</button>
+                    <button class="node-btn" data-node="Career" aria-selected="false">Career</button>
+                    <button class="node-btn" data-node="Friendship" aria-selected="false">Friendship</button>
+                    <button class="node-btn" data-node="Learning" aria-selected="false">Learning</button>
+                    <button class="node-btn" data-node="Experience" aria-selected="false">Experience</button>
                 </div>
 
                 <div id="node-description" class="node-description">
@@ -606,11 +607,9 @@
                 const nodeInfo = nodeDescriptions[nodeName];
 
                 if (nodeInfo) {
-                    // Update description
                     document.getElementById('node-title').textContent = nodeInfo.title;
                     document.getElementById('node-text').textContent = nodeInfo.description;
 
-                    // Render links if they exist
                     const linksDiv = document.getElementById('node-links');
                     linksDiv.innerHTML = '';
 
@@ -621,9 +620,12 @@
                         linksDiv.innerHTML = linksHTML;
                     }
 
-                    // Update active button state
-                    document.querySelectorAll('.node-btn').forEach(btn => btn.classList.remove('active'));
+                    document.querySelectorAll('.node-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.removeAttribute('aria-selected');
+                    });
                     this.classList.add('active');
+                    this.setAttribute('aria-selected', 'true');
                 }
             });
         });
@@ -728,93 +730,54 @@
         }
 
 
-<<<<<<< HEAD
-            const email = document.getElementById('email').value.trim();
-            const messageDiv = document.getElementById('form-message');
-            const form = document.getElementById('waitlist-form');
-            const submitBtn = form.querySelector('button[type="submit"]');
-
-            // Reset message
-            messageDiv.textContent = '';
-            messageDiv.className = 'form-message';
-
-            // Validate email
-            if (!email || !validateEmail(email)) {
-                messageDiv.textContent = 'Please enter a valid email address.';
-                messageDiv.className = 'form-message error';
-                return;
-            }
-
-            // Disable submit button
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Joining...';
-
-            try {
-                // Store email in localStorage (for demo purposes)
-                const waitlist = JSON.parse(localStorage.getItem('waitlist') || '[]');
-
-                // Check if email already exists
-                if (waitlist.includes(email)) {
-                    messageDiv.textContent = 'This email is already on the wait list!';
-                    messageDiv.className = 'form-message info';
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Join Wait list';
-                    return;
-                }
-
-                // Add email to wait list
-                waitlist.push(email);
-                localStorage.setItem('waitlist', JSON.stringify(waitlist));
-
-                // Success message
-                messageDiv.textContent = '✓ You\'ve been added to the wait list! Check your email for updates.';
-                messageDiv.className = 'form-message success';
-
-                // Clear form
-                form.reset();
-
-                // Re-enable button
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Join Wait list';
-            } catch (error) {
-                messageDiv.textContent = 'Something went wrong. Please try again.';
-                messageDiv.className = 'form-message error';
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Join Wait list';
-            }
-        });
-=======
->>>>>>> 81362f350b8a8e4ffe66e6208759ad643b4f1d85
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyKeICgKyTN0gp4RNv3ytPH277ggppPkYfxnAdTRtRfU1NSaETRWeNla6UUCN9W7Q9ZqQ/exec';
 
         function validateEmail(email) {
             const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return regex.test(email);
         }
 
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyKeICgKyTN0gp4RNv3ytPH277ggppPkYfxnAdTRtRfU1NSaETRWeNla6UUCN9W7Q9ZqQ/exec';       
-  
-  // 2. Explicitly define 'form' by selecting it from the document
-  // Make sure your <form> tag has id="waitlist-form"
-  const form = document.querySelector('#waitlist-form');
+        document.getElementById('waitlist-form').addEventListener('submit', function (e) {
+            e.preventDefault();
 
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    
-    // Optional: Show a "Syncing" status to the user
-    console.log("Initializing Node 08 Sync...");
+            const email = document.getElementById('email').value.trim();
+            const messageDiv = document.getElementById('form-message');
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
 
-    fetch(scriptURL, { 
-      method: 'POST', 
-      body: new FormData(form)
-    })
-      .then(response => {
-        alert("System Synced. You are on the list!");
-        form.reset(); // Clear the input after success
-      })
-      .catch(error => {
-        console.error('System Error!', error.message);
-        alert("Sync failed. Check console logs.");
-      });
-  });    </script>
+            messageDiv.textContent = '';
+            messageDiv.className = 'form-message';
+
+            if (!email || !validateEmail(email)) {
+                messageDiv.textContent = 'Please enter a valid email address.';
+                messageDiv.className = 'form-message error';
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Joining...';
+
+            const waitlist = JSON.parse(localStorage.getItem('waitlist') || '[]');
+
+            if (waitlist.includes(email)) {
+                messageDiv.textContent = 'This email is already on the wait list!';
+                messageDiv.className = 'form-message info';
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Join Wait list';
+                return;
+            }
+
+            waitlist.push(email);
+            localStorage.setItem('waitlist', JSON.stringify(waitlist));
+
+            messageDiv.textContent = '✓ You\'ve been added to the wait list!';
+            messageDiv.className = 'form-message success';
+            form.reset();
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Join Wait list';
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .catch(error => console.error('Sync error:', error.message));
+        });    </script>
 </body>
 </html>
